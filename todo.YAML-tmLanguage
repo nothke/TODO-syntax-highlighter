@@ -1,0 +1,16 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: TODO
+scopeName: text
+fileTypes: [txt todo]
+uuid: e3872ec7-60d7-4cc2-bf8f-57da56c339f2
+
+patterns:
+- comment: Important
+  name: comment
+  match: \[.*?\]
+
+- comment: Completed
+  name: comment
+  match: {.*?}
+...

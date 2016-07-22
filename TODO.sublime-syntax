@@ -1,0 +1,61 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: TODO
+file_extensions: [todo]
+scope: text
+contexts:
+  main:
+    - match: '(#\s).*'
+      scope: entity.name.funcion
+    
+    - match: '(\[\[).+(\]\])'
+      scope: invalid
+
+    - match: '(\?\?).+(\?\?)'
+      scope: markup.quote
+
+    - match: '\[.*?\]'
+      scope: keyword.control
+      
+    - match: '{.*?\}'
+      scope: constant.numeric
+
+    - match: '(\*\*).*?(\*\*)'
+      scope: markup.bold
+
+    - match: '(\=\s).*'
+      scope: string.unqoted
+
+    
+    # Comments begin with a '//' and finish at the end of the line
+    - match: '//'
+      scope: punctuation.definition.comment
+      push: line_comment
+
+    # Numbers
+    - match: '\b(-)?[0-9.]+\b'
+      scope: constant.numeric.example-c
+
+
+    - match: '\_.*?\_'
+      scope: markup.italic
+
+    - match: '\|.*?\|'
+      scope: variable.parameter
+
+    - match: '\|.*?\|'
+      scope: markup.italic
+
+
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character
+    #- match: '"'
+    #  scope: punctuation.definition.string.begin.example-c
+    #  push: double_quoted_string
+
+  # if I remove this there is a syntax error??
+  line_comment:
+    - meta_scope: comment.line.example-c
+    - match: $
+      pop: true

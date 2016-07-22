@@ -1,0 +1,22 @@
+
+
+TODO syntax highlighting for Sublime
+
+- Stuff you can do
+	- normal point
+	- another normal point
+	= yellowy point, equals sign - working on it now (this regex catches everything)
+	- something questionable ?? hmmm..? double question mark for questions/undecided ??
+	# very  important, or do next, or completed (cause it's green)
+	- [ problem in brackets ]
+	- [[ a really bad problem in double brackets ]] ?? or extremely important eye catchingly thing ??
+	- // completed point, basically a line comment
+
+- Some more ideas
+	- | orange italic text between bars |
+	- ** bold markup, n/a in other themes **
+	- _italic thing between lowlines (can't remember how they're called in english), n/a in other themes_
+	- { purplish thing in braces }
+
+- some more ideas but not yet done
+	- website links
