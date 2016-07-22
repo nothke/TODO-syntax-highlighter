@@ -34,9 +34,8 @@ contexts:
       push: line_comment
 
     # Numbers
-    - match: '\b(-)?[0-9.]+\b'
-      scope: constant.numeric.example-c
-
+    #- match: '\b(-)?[0-9.]+\b'
+    #  scope: constant.numeric.example-c
 
     - match: '\_.*?\_'
       scope: markup.italic
@@ -44,17 +43,13 @@ contexts:
     - match: '\|.*?\|'
       scope: variable.parameter
 
-    - match: '\|.*?\|'
-      scope: markup.italic
-
-
     # Strings begin and end with quotes, and use backslashes as an escape
     # character
     #- match: '"'
     #  scope: punctuation.definition.string.begin.example-c
     #  push: double_quoted_string
 
-  # if I remove this there is a syntax error??
+  # if I remove this there is a syntax error?? because pop?
   line_comment:
     - meta_scope: comment.line.example-c
     - match: $
