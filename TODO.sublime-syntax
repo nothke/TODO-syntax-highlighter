@@ -6,40 +6,56 @@ file_extensions: [todo]
 scope: text
 contexts:
   main:
+    # hash - green
     - match: '(#\s).*'
       scope: entity.name.funcion
     
+    # double brackets - invalid red
     - match: '(\[\[).+(\]\])'
       scope: invalid
 
+    # ?? - blue
     - match: '(\?\?).+(\?\?)'
       scope: markup.quote
 
-    - match: '\[.*?\]'
+    # < > - purple
+    - match: '<.*?>'
       scope: keyword.control
       
+    # [x] - done
+    - match: '(\[x\]).*'
+      scope: comment
+
+    # { } - purple
     - match: '{.*?\}'
       scope: constant.numeric
 
+    # ** ** - bold markup
     - match: '(\*\*).*?(\*\*)'
       scope: markup.bold
 
+    # = - yellow line
     - match: '(\=\s).*'
       scope: string.unqoted
 
+    # == == at least 2 for headers, orange
+    - match: '==.+=='
+      scope: variable.parameter
     
     # Comments begin with a '//' and finish at the end of the line
     - match: '//'
       scope: punctuation.definition.comment
       push: line_comment
 
-    # Numbers
+    # Numbers - not using this
     #- match: '\b(-)?[0-9.]+\b'
     #  scope: constant.numeric.example-c
 
+    # _ _ - italic markup
     - match: '\_.*?\_'
       scope: markup.italic
 
+    # | | - orange italic
     - match: '\|.*?\|'
       scope: variable.parameter
 

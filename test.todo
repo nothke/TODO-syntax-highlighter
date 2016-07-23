@@ -1,15 +1,21 @@
 
-TODO syntax highlighting for Sublime
+====== TODO syntax highlighting for Sublime =======
+== header surrounded with at least 2 equal signs ==
 
 - Stuff you can do
 	- normal point
 	- another normal point
 	= yellowy point, equals sign - working on it now (this regex catches everything)
+	= asdoiajsod
 	- something questionable ?? hmmm..? double question mark for questions/undecided ??
 	# very  important, or do next, or completed (cause it's green)
-	- [ problem in brackets ]
+	- < problem in wedges >
 	- [[ a really bad problem in double brackets ]] ?? or extremely important eye catchingly thing ??
 	- // completed point, basically a line comment
+
+- Alternative form - the Auston way
+	[ ] not done
+	[x] done
 
 - Some more ideas
 	- | orange italic text between bars |
